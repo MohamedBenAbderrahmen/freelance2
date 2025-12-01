@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ModernMarket - Creative Marketplace Frontend
 
 A modern, creative marketplace application built with React.js and Vite. Features a beautiful, responsive design with smooth animations and gradients.
@@ -123,3 +124,6 @@ Fully responsive across mobile, tablet, and desktop devices with custom breakpoi
 ---
 
 **Note**: This is a frontend-only application with simulated data. For full e-commerce functionality, integrate with a backend API for payment processing, user authentication, and order management.
+=======
+# freelance2
+>>>>>>> f6c09783cfcfab1779193b3777398d4532860c66
