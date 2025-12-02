@@ -2,10 +2,12 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import { useProducts } from '../context/ProductContext';
+import LoginModal from './LoginModal';
 import './Navbar.css';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const { getCartCount } = useCart();
   const { searchQuery, setSearchQuery } = useProducts();
   const navigate = useNavigate();
@@ -19,7 +21,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar">
+    <>
+      <nav className="navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
           <span className="logo-icon">🛍️</span>
@@ -62,7 +65,10 @@ const Navbar = () => {
             {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
           </Link>
 
-          <button className="nav-icon-btn user-btn">
+          <button 
+            className="nav-icon-btn user-btn"
+            onClick={() => setIsLoginModalOpen(true)}
+          >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
             </svg>
@@ -79,6 +85,11 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
+      <LoginModal 
+        isOpen={isLoginModalOpen} 
+        onClose={() => setIsLoginModalOpen(false)}
+      />
+    </>
   );
 };
 

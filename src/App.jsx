@@ -9,16 +9,19 @@ import Categories from './pages/Categories';
 import ProductDetails from './pages/ProductDetails';
 import SupplierProfile from './pages/SupplierProfile';
 import Suppliers from './pages/Suppliers';
+import SignUp from './pages/SignUp';
 import Footer from './components/Footer';
 import './App.css';
 
 function AppContent() {
   const location = useLocation();
   const showHero = location.pathname === '/';
+  const showNavbar = location.pathname !== '/signup';
+  const showFooter = location.pathname !== '/signup';
 
   return (
     <div className="App">
-      <Navbar />
+      {showNavbar && <Navbar />}
       {showHero && <Hero />}
       <Routes>
         <Route path="/" element={<Home />} />
@@ -27,8 +30,9 @@ function AppContent() {
         <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/supplier/:id" element={<SupplierProfile />} />
         <Route path="/suppliers" element={<Suppliers />} />
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
-      <Footer />
+      {showFooter && <Footer />}
     </div>
   );
 }
