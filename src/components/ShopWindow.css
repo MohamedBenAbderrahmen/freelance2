@@ -1,0 +1,695 @@
+/* ========== SHOP WINDOW SECTION ========== */
+.shop-window-section {
+  background: #000;
+  color: white;
+  padding: 80px 20px;
+  min-height: 100vh;
+}
+
+.shop-window-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ========== SECTION HEADER ========== */
+.shop-window-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.shop-window-header h2 {
+  font-size: 48px;
+  color: #ff8c00;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.shop-window-header p {
+  color: #ccc;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* ========== PRODUCTS SHOWCASE GRID ========== */
+.products-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+/* ========== PRODUCT SHOWCASE CARD ========== */
+.product-showcase-card {
+  background: rgba(20, 20, 20, 0.98);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid rgba(255, 140, 0, 0.1);
+  position: relative;
+}
+
+.product-showcase-card:hover {
+  border-color: #ff8c00;
+  transform: translateY(-15px);
+  box-shadow: 0 25px 50px rgba(255, 140, 0, 0.25);
+}
+
+/* ========== PRODUCT BADGE ========== */
+.product-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #ff8c00;
+  color: #000;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 10;
+  box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3);
+}
+
+/* ========== IMAGE CONTAINER ========== */
+.showcase-image-container {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  background: #111;
+}
+
+.showcase-product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-showcase-card:hover .showcase-product-image {
+  transform: scale(1.1);
+}
+
+/* ========== DISCOUNT LABEL ========== */
+.discount-label {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background: linear-gradient(135deg, #ff3232 0%, #ff6b6b 100%);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(255, 50, 50, 0.3);
+}
+
+/* ========== IMAGE OVERLAY ========== */
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product-showcase-card:hover .image-overlay {
+  opacity: 1;
+}
+
+.quick-view-btn {
+  background: #ff8c00;
+  color: #000;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.quick-view-btn:hover {
+  background: #ffb84d;
+  transform: scale(1.05);
+}
+
+/* ========== PRODUCT INFO ========== */
+.showcase-product-info {
+  padding: 20px;
+}
+
+.showcase-category {
+  color: #999;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.showcase-product-info h3 {
+  font-size: 16px;
+  color: white;
+  margin-bottom: 10px;
+  min-height: 40px;
+  line-height: 1.4;
+}
+
+/* ========== PRODUCT RATING ========== */
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.stars {
+  color: #ff8c00;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.review-count {
+  color: #999;
+  font-size: 12px;
+}
+
+/* ========== PRICE SECTION ========== */
+.price-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.current-price {
+  font-size: 20px;
+  color: #ff8c00;
+  font-weight: 700;
+}
+
+.original-price {
+  font-size: 14px;
+  color: #666;
+  text-decoration: line-through;
+}
+
+/* ========== COLOR PREVIEW ========== */
+.color-preview {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.color-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff8c00 0%, #ffb84d 100%);
+  border: 2px solid rgba(255, 140, 0, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.color-dot:hover {
+  transform: scale(1.15);
+  border-color: #ff8c00;
+}
+
+.more-colors {
+  color: #999;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* ========== ADD TO CART BUTTON (Quick) ========== */
+.add-to-cart-quick-btn {
+  width: 100%;
+  padding: 12px;
+  background: #ff8c00;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.add-to-cart-quick-btn:hover {
+  background: #ffb84d;
+  transform: scale(1.02);
+}
+
+/* ========== VIEW ALL SECTION ========== */
+.view-all-section {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.view-all-btn {
+  background: linear-gradient(135deg, #ff8c00 0%, #ffb84d 100%);
+  color: #000;
+  border: none;
+  padding: 18px 50px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 8px 25px rgba(255, 140, 0, 0.3);
+}
+
+.view-all-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(255, 140, 0, 0.4);
+}
+
+/* ========== MODAL OVERLAY ========== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ========== MODAL CONTENT ========== */
+.modal-content {
+  background: #1a1a1a;
+  border-radius: 20px;
+  max-width: 1000px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  border: 2px solid #ff8c00;
+  position: relative;
+  animation: slideUp 0.4s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #ff8c00;
+  color: #000;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1001;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  background: #ffb84d;
+  transform: rotate(90deg);
+}
+
+/* ========== MODAL BODY ========== */
+.modal-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px;
+}
+
+.modal-image {
+  position: relative;
+}
+
+.modal-image img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.discount-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: linear-gradient(135deg, #ff3232 0%, #ff6b6b 100%);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  box-shadow: 0 4px 15px rgba(255, 50, 50, 0.3);
+}
+
+/* ========== MODAL DETAILS ========== */
+.modal-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.modal-category {
+  color: #999;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.modal-badge {
+  background: #ff8c00;
+  color: #000;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.modal-details h2 {
+  font-size: 32px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* ========== MODAL RATING ========== */
+.modal-rating {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.modal-stars {
+  font-size: 16px;
+  color: #ff8c00;
+  font-weight: 700;
+}
+
+.modal-reviews {
+  color: #999;
+  font-size: 13px;
+}
+
+/* ========== MODAL PRICE SECTION ========== */
+.modal-price-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: rgba(255, 140, 0, 0.05);
+  border-radius: 8px;
+}
+
+.modal-current-price {
+  font-size: 32px;
+  color: #ff8c00;
+  font-weight: 700;
+}
+
+.modal-original-price {
+  font-size: 18px;
+  color: #666;
+  text-decoration: line-through;
+}
+
+.modal-savings {
+  margin-left: auto;
+  background: rgba(255, 50, 50, 0.1);
+  color: #ff3232;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+/* ========== MODAL DESCRIPTION ========== */
+.modal-description {
+  color: #ccc;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+/* ========== MODAL SECTION ========== */
+.modal-section {
+  margin-bottom: 25px;
+}
+
+.modal-section h4 {
+  color: #ff8c00;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+/* ========== COLOR OPTIONS ========== */
+.color-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.color-btn {
+  padding: 10px 18px;
+  background: rgba(255, 140, 0, 0.1);
+  border: 2px solid rgba(255, 140, 0, 0.3);
+  color: #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.color-btn:hover {
+  border-color: #ff8c00;
+  background: rgba(255, 140, 0, 0.15);
+}
+
+.color-btn.active {
+  background: #ff8c00;
+  color: #000;
+  border-color: #ff8c00;
+  font-weight: 700;
+}
+
+/* ========== SIZE OPTIONS ========== */
+.size-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.size-btn {
+  padding: 10px 18px;
+  background: rgba(255, 140, 0, 0.1);
+  border: 2px solid rgba(255, 140, 0, 0.3);
+  color: #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.size-btn:hover {
+  border-color: #ff8c00;
+  background: rgba(255, 140, 0, 0.15);
+}
+
+.size-btn.active {
+  background: #ff8c00;
+  color: #000;
+  border-color: #ff8c00;
+  font-weight: 700;
+}
+
+/* ========== MODAL ADD TO CART BUTTON ========== */
+.modal-add-to-cart-btn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #ff8c00 0%, #ffb84d 100%);
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  box-shadow: 0 8px 20px rgba(255, 140, 0, 0.3);
+}
+
+.modal-add-to-cart-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(255, 140, 0, 0.4);
+}
+
+/* ========== ADDITIONAL INFO ========== */
+.additional-info {
+  background: rgba(255, 140, 0, 0.05);
+  border: 1px solid rgba(255, 140, 0, 0.2);
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: auto;
+}
+
+.additional-info p {
+  color: #ccc;
+  font-size: 13px;
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 1024px) {
+  .products-showcase-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .modal-body {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .shop-window-section {
+    padding: 60px 15px;
+  }
+
+  .shop-window-header h2 {
+    font-size: 32px;
+  }
+
+  .products-showcase-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .showcase-image-container {
+    height: 300px;
+  }
+
+  .modal-details h2 {
+    font-size: 24px;
+  }
+
+  .modal-current-price {
+    font-size: 24px;
+  }
+
+  .modal-original-price {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .shop-window-section {
+    padding: 40px 10px;
+  }
+
+  .shop-window-header h2 {
+    font-size: 24px;
+  }
+
+  .shop-window-header p {
+    font-size: 13px;
+  }
+
+  .showcase-image-container {
+    height: 250px;
+  }
+
+  .showcase-product-info h3 {
+    font-size: 14px;
+  }
+
+  .modal-overlay {
+    padding: 10px;
+  }
+
+  .modal-body {
+    padding: 15px;
+  }
+
+  .modal-details h2 {
+    font-size: 20px;
+  }
+
+  .color-options,
+  .size-options {
+    gap: 8px;
+  }
+
+  .color-btn,
+  .size-btn {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .modal-add-to-cart-btn {
+    padding: 12px;
+    font-size: 14px;
+  }
+}

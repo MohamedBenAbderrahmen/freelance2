@@ -1,0 +1,667 @@
+/* ========== SIZE & FIT GUIDE SECTION ========== */
+.size-fit-guide-section {
+  background: #000;
+  color: white;
+  padding: 120px 20px 80px;
+  min-height: 100vh;
+}
+
+.size-fit-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ========== PAGE HEADER ========== */
+.guide-page-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.guide-page-header h1 {
+  font-size: 48px;
+  color: #ff8c00;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.guide-page-header p {
+  color: #ccc;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* ========== PRODUCT TYPE SELECTOR ========== */
+.product-type-selector {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.type-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.type-btn {
+  padding: 12px 24px;
+  background: rgba(20, 20, 20, 0.98);
+  border: 2px solid rgba(255, 140, 0, 0.3);
+  color: #ccc;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.type-btn:hover {
+  border-color: #ff8c00;
+  background: rgba(255, 140, 0, 0.05);
+  color: #ff8c00;
+}
+
+.type-btn.active {
+  background: #ff8c00;
+  color: #000;
+  border-color: #ff8c00;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(255, 140, 0, 0.3);
+}
+
+/* ========== SIZE GUIDE CONTENT ========== */
+.size-guide-content {
+  background: rgba(20, 20, 20, 0.98);
+  border: 2px solid #ff8c00;
+  border-radius: 15px;
+  padding: 40px;
+  margin-bottom: 60px;
+}
+
+.guide-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.guide-header h2 {
+  font-size: 36px;
+  color: #ff8c00;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.guide-header p {
+  color: #ccc;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* ========== GUIDE LAYOUT - TWO COLUMNS ========== */
+.guide-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* ========== SIZE CHART SECTION ========== */
+.size-chart-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.size-chart-section h3 {
+  font-size: 20px;
+  color: #ff8c00;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* ========== SIZE CHART WRAPPER WITH SCROLL ========== */
+.size-chart-wrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 140, 0, 0.2);
+  margin-bottom: 15px;
+  scrollbar-width: thin;
+  scrollbar-color: #ff8c00 rgba(255, 140, 0, 0.1);
+}
+
+.size-chart-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.size-chart-wrapper::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.size-chart-wrapper::-webkit-scrollbar-thumb {
+  background: #ff8c00;
+  border-radius: 4px;
+}
+
+.size-chart-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #ffb84d;
+}
+
+/* ========== SIZE CHART TABLE ========== */
+.size-chart-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #000;
+  min-width: 600px;
+}
+
+.size-chart-table thead {
+  background: linear-gradient(90deg, #ff8c00 0%, #ffb84d 100%);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.size-chart-table th {
+  color: #000;
+  padding: 18px 15px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.size-chart-table td {
+  color: #ccc;
+  padding: 16px 15px;
+  border-bottom: 1px solid rgba(255, 140, 0, 0.1);
+  font-size: 14px;
+}
+
+.size-row {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.size-row:hover {
+  background: rgba(255, 140, 0, 0.05);
+}
+
+.size-row.selected {
+  background: rgba(255, 140, 0, 0.15);
+  border-left: 4px solid #ff8c00;
+}
+
+.size-row.selected td {
+  color: #ffb84d;
+  font-weight: 600;
+}
+
+.size-label {
+  font-weight: 700;
+  color: #ff8c00;
+  min-width: 60px;
+}
+
+.chart-note {
+  color: #999;
+  font-size: 12px;
+  margin: 0;
+  text-align: center;
+  padding-top: 10px;
+}
+
+/* ========== MEASUREMENT GUIDE SECTION ========== */
+.measurement-guide-section h3 {
+  font-size: 20px;
+  color: #ff8c00;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* ========== MEASUREMENT CARDS ========== */
+.measurement-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.measurement-card {
+  background: rgba(255, 140, 0, 0.05);
+  border: 1px solid rgba(255, 140, 0, 0.2);
+  border-radius: 8px;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+.measurement-card:hover {
+  border-color: #ff8c00;
+  background: rgba(255, 140, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+.measurement-icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.measurement-card h4 {
+  color: #ff8c00;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.measurement-card p {
+  color: #ccc;
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ========== FIT INFO CARD ========== */
+.fit-info-card {
+  background: rgba(255, 140, 0, 0.1);
+  border: 2px solid rgba(255, 140, 0, 0.3);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.fit-info-card h4 {
+  color: #ff8c00;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.fit-info-card p {
+  color: #ccc;
+  font-size: 13px;
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+.model-info {
+  color: #999;
+  font-size: 12px !important;
+  margin-top: 12px !important;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 140, 0, 0.2);
+}
+
+/* ========== GENERAL TIPS SECTION ========== */
+.general-tips-section {
+  margin-bottom: 60px;
+}
+
+.general-tips-section h2 {
+  font-size: 36px;
+  color: #ff8c00;
+  margin-bottom: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.tip-card {
+  background: rgba(20, 20, 20, 0.98);
+  border: 2px solid rgba(255, 140, 0, 0.2);
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.tip-card:hover {
+  border-color: #ff8c00;
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(255, 140, 0, 0.2);
+}
+
+.tip-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.tip-card h3 {
+  font-size: 18px;
+  color: #ff8c00;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.tip-card p {
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ========== FIT TYPES SECTION ========== */
+.fit-types-section {
+  margin-bottom: 60px;
+}
+
+.fit-types-section h2 {
+  font-size: 36px;
+  color: #ff8c00;
+  margin-bottom: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.fit-types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.fit-type-card {
+  background: rgba(20, 20, 20, 0.98);
+  border: 2px solid rgba(255, 140, 0, 0.2);
+  border-radius: 12px;
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+.fit-type-card:hover {
+  border-color: #ff8c00;
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(255, 140, 0, 0.2);
+}
+
+.fit-type-visual {
+  width: 100%;
+  height: 60px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Visual representation of fit types */
+.fit-type-visual::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ff8c00;
+  border-radius: 3px;
+  height: 20px;
+}
+
+.tight-fit::before {
+  width: 25px;
+}
+
+.slim-fit::before {
+  width: 35px;
+}
+
+.regular-fit::before {
+  width: 50px;
+}
+
+.relaxed-fit::before {
+  width: 65px;
+}
+
+.oversized-fit::before {
+  width: 80px;
+}
+
+.baggy-fit::before {
+  width: 95px;
+}
+
+.fit-type-card h3 {
+  font-size: 16px;
+  color: #ff8c00;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.fit-type-card p {
+  color: #ccc;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ========== HELP SECTION ========== */
+.help-section {
+  background: rgba(255, 140, 0, 0.05);
+  border: 2px solid #ff8c00;
+  border-radius: 15px;
+  padding: 50px;
+  text-align: center;
+}
+
+.help-section h2 {
+  font-size: 36px;
+  color: #ff8c00;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.help-section p {
+  color: #ccc;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.help-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.help-btn {
+  padding: 15px 30px;
+  border: 2px solid #ff8c00;
+  border-radius: 30px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.email-btn {
+  background: transparent;
+  color: #ff8c00;
+}
+
+.email-btn:hover {
+  background: #ff8c00;
+  color: #000;
+  transform: translateY(-3px);
+}
+
+.chat-btn {
+  background: transparent;
+  color: #ff8c00;
+}
+
+.chat-btn:hover {
+  background: #ff8c00;
+  color: #000;
+  transform: translateY(-3px);
+}
+
+.phone-btn {
+  background: transparent;
+  color: #ff8c00;
+}
+
+.phone-btn:hover {
+  background: #ff8c00;
+  color: #000;
+  transform: translateY(-3px);
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 1024px) {
+  .guide-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .measurement-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .size-guide-content {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .size-fit-guide-section {
+    padding: 100px 15px 60px;
+  }
+
+  .guide-page-header h1 {
+    font-size: 32px;
+  }
+
+  .size-guide-content {
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .guide-header h2 {
+    font-size: 24px;
+  }
+
+  .type-buttons {
+    gap: 10px;
+  }
+
+  .type-btn {
+    padding: 10px 16px;
+    font-size: 12px;
+  }
+
+  .size-chart-table th,
+  .size-chart-table td {
+    padding: 12px 10px;
+    font-size: 12px;
+  }
+
+  .measurement-guide-section h3 {
+    font-size: 18px;
+  }
+
+  .tips-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .tip-card {
+    padding: 20px;
+  }
+
+  .tip-icon {
+    font-size: 32px;
+  }
+
+  .fit-types-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .general-tips-section h2,
+  .fit-types-section h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .size-fit-guide-section {
+    padding: 100px 10px 40px;
+  }
+
+  .guide-page-header h1 {
+    font-size: 24px;
+  }
+
+  .size-guide-content {
+    padding: 15px;
+  }
+
+  .guide-layout {
+    gap: 20px;
+  }
+
+  .size-chart-wrapper {
+    overflow-x: scroll;
+  }
+
+  .size-chart-table {
+    min-width: 500px;
+  }
+
+  .type-buttons {
+    flex-direction: column;
+  }
+
+  .type-btn {
+    width: 100%;
+  }
+
+  .measurement-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tip-card {
+    padding: 15px;
+  }
+
+  .fit-types-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .help-buttons {
+    flex-direction: column;
+  }
+
+  .help-btn {
+    width: 100%;
+  }
+
+  .general-tips-section h2,
+  .fit-types-section h2 {
+    font-size: 22px;
+  }
+
+  .help-section {
+    padding: 30px 15px;
+  }
+}

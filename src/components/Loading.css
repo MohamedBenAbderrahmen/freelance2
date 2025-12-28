@@ -1,0 +1,45 @@
+/* ========== LOADING BAR ========== */
+.loading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  height: 3px;
+  background: transparent;
+}
+
+.loading-bar {
+  width: 100%;
+  height: 100%;
+  background: #ff8c00;
+  transform: translateX(-100%);
+  animation: loading 1s ease-in-out infinite;
+}
+
+.loading-progress {
+  height: 100%;
+  background: linear-gradient(90deg, #ff8c00 0%, #ffb84d 100%);
+  animation: progress 1s ease-in-out infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes progress {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
+}
